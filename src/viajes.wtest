@@ -1,0 +1,25 @@
+import viajes.*
+
+describe "group of tests" {
+	
+	const excursion1 = new ExcursionACiudad(idiomas = #{"espanol", "frances", "aleman"}, 
+											cantAtraccionesAVisitar = 4)
+	
+	test "excursion a ciudad Dias" {
+		assert.equals(2, excursion1.cantDias())
+	}
+	
+	test "excursion a ciudad esfuerzo"{
+		assert.notThat(excursion1.implicaEsfuerzo())
+	}
+	
+	test "excursion a ciudad broncearse"{
+		assert.notThat(excursion1.sirveParaBroncearse())
+	}
+	
+	test "excursion a ciudad es intersante"{
+		assert.that(excursion1.esInteresante())
+	}
+}
+
+

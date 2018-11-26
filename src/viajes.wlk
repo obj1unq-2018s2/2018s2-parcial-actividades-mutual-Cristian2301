@@ -11,6 +11,10 @@ class Viaje {
 	method usa(idioma){
 		return idiomas.contains(idioma)
 	}
+	
+	method recomendadaPara(socio){
+		return self.esInteresante() and socio.leAtrae(self) and not socio.hizo(self)
+	}
 }
 
 

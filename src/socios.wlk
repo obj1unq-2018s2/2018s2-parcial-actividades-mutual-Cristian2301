@@ -1,9 +1,10 @@
 import viajes.*
+import clasesDeGimnasia.*
 
 class Socio {
 	const actividadesRealizadas = #{}
 	const maximoDeActividades = 0
-	const edad = 0
+	const property edad = 0
 	const idiomas = #{}
 	
 	method esAdoradorDelSol(){
@@ -25,6 +26,10 @@ class Socio {
 	
 	method llegoAlMaximoDeActividades(){
 		return actividadesRealizadas.size() >= maximoDeActividades
+	}
+	
+	method hizo(actividad){
+		return actividadesRealizadas.contains(actividad)
 	}
 }
 
