@@ -21,3 +21,4 @@ class ClaseDeGim {
 		return socio.edad().between(20, 30)
 	}
 }
+

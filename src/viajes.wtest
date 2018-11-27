@@ -1,9 +1,17 @@
 import viajes.*
+import socios.*
+import clasesDeGimnasia.*
+
 
 describe "group of tests" {
 	
+	const claseGim = new ClaseDeGim()
+	const playa1 = new DePlaya(largoDePlaya = 1000)
+	const playa2 = new DePlaya(largoDePlaya = 2000)
 	const excursion1 = new ExcursionACiudad(idiomas = #{"espanol", "frances", "aleman"}, 
 											cantAtraccionesAVisitar = 4)
+	const roque = new Socio(actividadesRealizadas = #{playa1, playa2}, maximoDeActividades = 2)
+	const juan = new Tranquilo(edad = 23)
 	
 	test "excursion a ciudad Dias" {
 		assert.equals(2, excursion1.cantDias())
@@ -19,6 +27,26 @@ describe "group of tests" {
 	
 	test "excursion a ciudad es intersante"{
 		assert.that(excursion1.esInteresante())
+	}
+	
+	test "socio es adorador de sol"{
+		assert.that(roque.esAdoradorDelSol())
+	}
+	
+	test "socio actividades esforzadas"{
+		assert.equals(#{playa2}, roque.actividadesEsforzadas())
+	}
+	
+	test "socio clase de gim"{
+		assert.throwsException({roque.realizar(claseGim)})
+	}
+	
+	test "socio le atrae actividad"{
+		assert.notThat(juan.leAtrae(claseGim))
+	}
+	
+	test "actividad recomendada para socio"{
+		assert.that(claseGim.recomendadaPara(juan))
 	}
 }
 

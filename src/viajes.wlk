@@ -1,3 +1,4 @@
+
 class Viaje {
 	const property idiomas = #{}
 	const property implicaEsfuerzo = false

@@ -1,6 +1,7 @@
 import viajes.*
 import clasesDeGimnasia.*
 
+
 class Socio {
 	const actividadesRealizadas = #{}
 	const maximoDeActividades = 0
