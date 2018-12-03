@@ -1,6 +1,8 @@
 
 class Viaje {
 	const property idiomas = #{}
+	
+	// TODO Estos 3 atributos/properties no tienen utilidad.
 	const property implicaEsfuerzo = false
 	const property sirveParaBroncearse = false
 	const property cantDias = 0
